@@ -78,19 +78,19 @@ function initProfitGuardAgent(){
     },
     {
       keys:['модули','модуль','distribution','retail','sales','ceo','inventory','commercial'],
-      answer:'В платформе 3 ключевых модуля: DistributionGuard — контроль дистрибуции, клиентов, регионов, дистр-пакетов и АКБ; RetailGuard — контроль SKU, OOS, overstock, frozen capital и автозаказа; SalesControl Tower — задачи команде продаж, план дожима и реактивация клиентов.'
+      answer:'В платформе 3 ключевых продукта: RetailGuard — автозаказ, ABC/XYZ и управление остатками; DistributionGuard — заказы, перемещения между регионами и Trade Marketing внутри дистрибуции; SalesControl — action-list и контроль исполнения sales-команды.'
     },
     {
       keys:['distributionguard','commercial','план факт','план/факт','дистр','акб'],
-      answer:'DistributionGuard показывает план/факт по регионам, клиентам и дистр-пакетам, прогноз закрытия месяца, GAP, нужный темп в день, АКБ-точки, потерянные/просевшие точки и план дожима.'
+      answer:'DistributionGuard решает задачи заказов и перемещений между регионами: где дефицит, где излишек, что переместить, что заказать поставщику и как закрыть supply gap.'
     },
     {
       keys:['retailguard','inventory','запас','остат','oos','overstock','frozen','автозаказ'],
-      answer:'RetailGuard / Inventory Tower управляет запасами: OOS, overstock, dead stock, frozen capital, ABC/XYZ, автозаказ P1/P2/P3, перемещения между регионами, промо, возвраты и ликвидация.'
+      answer:'RetailGuard управляет retail-остатками: автозаказ P1/P2/P3, ABC/XYZ, OOS, overstock, dead stock, frozen capital и приоритеты закупа по SKU.'
     },
     {
-      keys:['salescontrol','sales control','команда','задачи','дожим','менеджер'],
-      answer:'SalesControl Tower превращает аналитику в задачи: кого дожать сегодня, какие клиенты не заказали, какие АКБ-точки потеряны, какой регион проседает и какой action-list нужен команде на день/неделю.'
+      keys:['trade','trade marketing','оборачиваемость','промо','акб','дожим'],
+      answer:'Trade Marketing находится внутри DistributionGuard: он управляет оборачиваемостью, промо, sell-out, АКБ, клиентами риска и дистр-пакетами через связку регион → клиент → пакет → действие.'
     },
     {
       keys:['файлы','загрузка','1с','excel','планфакт','выгрузка'],
@@ -123,7 +123,7 @@ function initProfitGuardAgent(){
       if(s > score){ score = s; best = item; }
     }
     if(best) return best.answer;
-    return 'Могу ответить по ProfitGuard Platform, модулям DistributionGuard / RetailGuard / SalesControl Tower, пилоту, файлам 1С/Excel, АКБ, план-факту, запасам и стоимости. Напишите вопрос короче или свяжитесь напрямую: +7 777 009 07 03.';
+    return 'Могу ответить по ProfitGuard Platform, модулям RetailGuard / DistributionGuard / SalesControl, пилоту, файлам 1С/Excel, АКБ, план-факту, запасам и стоимости. Напишите вопрос короче или свяжитесь напрямую: +7 777 009 07 03.';
   }
 
   const styles = document.createElement('style');

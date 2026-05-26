@@ -3,199 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ProfitGuard Platform — коммерческая control tower для ритейла, дистрибуции и sales-команд</title>
-<meta name="description" content="Единая платформа управления продажами, запасами, АКБ, план-фактом и действиями команды.">
+<title>ProfitGuard Platform — RetailGuard, DistributionGuard, SalesControl</title>
+<meta name="description" content="Платформа для собственников бизнеса: автозаказ, дистрибуция, trade marketing внутри Distribution и контроль действий sales-команды.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Profit<span>Guard</span> Platform</a>
+    <a href="index.html" class="active" class="nav-logo">Profit<span>Guard</span> Platform</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Платформа</a></li><li><a href="commercial.html" class="">DistributionGuard</a></li><li><a href="inventory.html" class="">RetailGuard</a></li><li><a href="ceo.html" class="">SalesControl</a></li><li><a href="contact.html" class="nav-cta">Контакт</a></li>
+      <li><a href="index.html" class="active">Платформа</a></li>
+      <li><a href="retail.html">RetailGuard</a></li>
+      <li><a href="distribution.html">DistributionGuard</a></li>
+      <li><a href="sales.html">SalesControl</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="contact.html" class="nav-cta">Контакт</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-tag">B2B Platform · Retail · Distribution · Sales Control</div>
-  <h1>ProfitGuard Platform —<br><em>единый контур управления деньгами</em><br>в продажах, запасах и командах</h1>
-  <p class="hero-sub">Платформа показывает, где бизнес теряет продажи, где заморожены деньги, какие клиенты и точки выпадают, какие SKU требуют действия — и что команда должна сделать сегодня.</p>
+  <div class="hero-tag">AI Control Tower · Retail · Distribution · Sales Control</div>
+  <h1>ProfitGuard Platform —<br><em>система управления деньгами</em><br>в товарном бизнесе</h1>
+  <p class="hero-sub">Платформа объединяет retail-управление запасами, дистрибуцию с trade marketing-контуром и контроль действий sales-команды.</p>
   <div class="hero-btns">
-    <a href="contact.html" class="btn btn-primary">Запустить пилот →</a>
-    <a href="#modules" class="btn btn-ghost">Смотреть модули</a>
-    <a href="#plans" class="btn btn-ghost">Тарифы и доступы</a>
+    <a href="demo.html" class="btn btn-primary">Открыть demo →</a>
+    <a href="contact.html" class="btn btn-ghost">Запустить пилот</a>
   </div>
   <div class="container">
     <div class="kpi-grid" style="margin-top:56px">
-      <div class="kpi-card"><div class="kpi-label">Commercial Control</div><div class="kpi-val" style="color:#93C5FD">план/факт</div><div class="kpi-sub">регионы, клиенты, пакеты, АКБ</div><div class="kpi-bar" style="background:#185FA5;width:90%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">Retail & Inventory</div><div class="kpi-val" style="color:#10B981">OOS / frozen</div><div class="kpi-sub">SKU, остатки, заказ, перемещения</div><div class="kpi-bar" style="background:#10B981;width:85%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">Sales Action</div><div class="kpi-val" style="color:#F59E0B">дожим</div><div class="kpi-sub">кому звонить, что вернуть, что продать</div><div class="kpi-bar" style="background:#F59E0B;width:100%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">AI/BI Core</div><div class="kpi-val" style="color:#EF4444">без ручного Excel</div><div class="kpi-sub">1С / Excel → управленческий dashboard</div><div class="kpi-bar" style="background:#EF4444;width:80%"></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="modules">
-  <div class="container">
-    <div class="label">Архитектура платформы</div>
-    <h2 class="title">Три продукта.<br>Одна платформа и единый Core.</h2>
-    <p class="subtitle">Каждый модуль можно продавать отдельно или подключать по подписке в едином кабинете ProfitGuard Platform.</p>
-
-    <div class="prod-grid">
-      <div class="prod-card">
-        <div class="prod-card-head">
-          <div class="prod-icon prod-icon-blue">📊</div>
-          <div class="prod-num" style="color:var(--blue)">Модуль 01</div>
-          <div class="prod-name">DistributionGuard</div>
-          <div class="prod-desc">План/факт для дистрибуции: регионы, клиенты, дистр-пакеты, АКБ, прогноз месяца и план дожима.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-blue">
-            <li>Plan/Fact по регионам и клиентам</li>
-            <li>АКБ: потерянные и просевшие точки</li>
-            <li>Дистр-пакеты ФУД / НОНФУД</li>
-            <li>Динамика по месяцам и годам</li>
-            <li>План дожима до конца месяца</li>
-            <li>Excel-экспорт одной кнопкой</li>
-          </ul>
-          <a href="commercial.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть DistributionGuard →</a>
-        </div>
-      </div>
-
-      <div class="prod-card" style="border-color:var(--green);border-width:1.5px">
-        <div class="prod-card-head">
-          <div class="prod-icon prod-icon-green">🛒</div>
-          <div class="prod-num" style="color:var(--green)">Модуль 02</div>
-          <div class="prod-name">RetailGuard</div>
-          <div class="prod-desc">Управление retail-ассортиментом, SKU, остатками, OOS, overstock, frozen capital и автоматическим заказом.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-green">
-            <li>SKU / категории / магазины</li>
-            <li>OOS / Overstock / Dead stock</li>
-            <li>ABC/XYZ и скорость продаж</li>
-            <li>Автозаказ P1/P2/P3</li>
-            <li>Перемещения между точками</li>
-            <li>Промо / возврат / ликвидация</li>
-          </ul>
-          <a href="inventory.html" class="btn btn-green btn-sm" style="width:100%;justify-content:center">Открыть RetailGuard →</a>
-        </div>
-      </div>
-
-      <div class="prod-card">
-        <div class="prod-card-head">
-          <div class="prod-icon prod-icon-purple">⚡</div>
-          <div class="prod-num" style="color:var(--purple)">Модуль 03</div>
-          <div class="prod-name">SalesControl Tower</div>
-          <div class="prod-desc">Ежедневный action-list для sales-команды: кого дожать, какие точки вернуть, где план под угрозой.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-purple">
-            <li>Задачи региональным менеджерам</li>
-            <li>Клиенты риска и потерянные точки</li>
-            <li>План дожима сегодня / неделя / месяц</li>
-            <li>Контроль выполнения действий</li>
-            <li>Роли CEO / директор / регион</li>
-            <li>Board-ready summary</li>
-          </ul>
-          <a href="ceo.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть SalesControl →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-dark">
-  <div class="container">
-    <div class="label" style="color:#93C5FD">ProfitGuard Core</div>
-    <h2 class="title title-white">Один технологический слой<br>для всех модулей.</h2>
-    <div class="why-grid">
-      <div class="why-item"><div class="why-icon">📥</div><div class="why-text"><h4>Upload Center</h4><p>ПланФакт, 1С, Excel/CSV, ежедневные выгрузки и проверка структуры файлов.</p></div></div>
-      <div class="why-item"><div class="why-icon">🔐</div><div class="why-text"><h4>Роли и доступы</h4><p>CEO видит всё, региональный менеджер — только свой контур, viewer — только просмотр.</p></div></div>
-      <div class="why-item"><div class="why-icon">🧠</div><div class="why-text"><h4>AI/BI выводы</h4><p>Платформа не просто считает KPI, а формирует выводы и action-list для команды.</p></div></div>
-      <div class="why-item"><div class="why-icon">📤</div><div class="why-text"><h4>Export Engine</h4><p>Excel/PDF-отчёты с README, методологией и источниками загрузки.</p></div></div>
-      <div class="why-item"><div class="why-icon">🧾</div><div class="why-text"><h4>История загрузок</h4><p>Каждая загрузка сохраняется как версия. Видно, какие данные изменили факт.</p></div></div>
-      <div class="why-item"><div class="why-icon">🛡️</div><div class="why-text"><h4>Data Leak Prevention</h4><p>Корпоративная логика обработки данных, контроль источников и разграничение доступа.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section-off" id="plans">
-  <div class="container">
-    <div class="label">Подписки и доступы</div>
-    <h2 class="title">Клиент покупает не всё сразу,<br>а нужный уровень контроля.</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px">
-      <div class="prod-card">
-        <div class="prod-card-head">
-          <div class="prod-num" style="color:var(--blue)">Starter</div>
-          <div class="prod-name">1 модуль</div>
-          <div class="prod-desc">Для первого пилота и малой команды.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-blue">
-            <li>1 компания</li><li>ручная загрузка Excel</li><li>1 модуль на выбор</li><li>Dashboard + Excel export</li>
-          </ul>
-          <div style="font-size:22px;font-weight:700;color:var(--text)">300–700 тыс ₸ / мес</div>
-        </div>
-      </div>
-      <div class="prod-card" style="border-color:var(--green);border-width:1.5px">
-        <div class="prod-card-head">
-          <div class="prod-num" style="color:var(--green)">Business</div>
-          <div class="prod-name">2 модуля + роли</div>
-          <div class="prod-desc">Для региональных компаний и B2B-команд.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-green">
-            <li>до 10 пользователей</li><li>история загрузок</li><li>роли и регионы</li><li>АКБ / динамика / action-list</li>
-          </ul>
-          <div style="font-size:22px;font-weight:700;color:var(--text)">1–2,5 млн ₸ / мес</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card-head">
-          <div class="prod-num" style="color:var(--purple)">Enterprise</div>
-          <div class="prod-name">Вся платформа</div>
-          <div class="prod-desc">Для сетей, дистрибьюторов и холдингов.</div>
-        </div>
-        <div class="prod-card-body">
-          <ul class="prod-features feat-purple">
-            <li>все модули</li><li>API / 1С-интеграция</li><li>SLA и админ-панель</li><li>кастомные отчёты</li>
-          </ul>
-          <div style="font-size:22px;font-weight:700;color:var(--text)">от 3 млн ₸ / мес</div>
-        </div>
-      </div>
+      <div class="kpi-card"><div class="kpi-label">RetailGuard</div><div class="kpi-val" style="color:#10B981">AutoOrder</div><div class="kpi-sub">ABC, OOS, остатки</div><div class="kpi-bar" style="background:#10B981;width:88%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">DistributionGuard</div><div class="kpi-val" style="color:#185FA5">Orders</div><div class="kpi-sub">заказы и перемещения</div><div class="kpi-bar" style="background:#185FA5;width:78%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Trade Marketing</div><div class="kpi-val" style="color:#F59E0B">inside Distribution</div><div class="kpi-sub">промо и оборачиваемость</div><div class="kpi-bar" style="background:#F59E0B;width:82%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">SalesControl</div><div class="kpi-val" style="color:#93C5FD">Action-list</div><div class="kpi-sub">задачи команде</div><div class="kpi-bar" style="background:#93C5FD;width:100%"></div></div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container" style="text-align:center">
-    <div class="label">Следующий шаг</div>
-    <h2 class="title">Запустить пилот ProfitGuard Platform<br>на ваших данных.</h2>
-    <p class="subtitle">Пилот начинается с одного модуля и масштабируется до полной платформы.</p>
-    <div class="hero-btns" style="justify-content:center">
-      <a href="contact.html" class="btn btn-primary">Запустить пилот →</a>
-      <a href="commercial.html" class="btn btn-ghost">Смотреть первый модуль</a>
+  <div class="container">
+    <div class="label">Продуктовая архитектура</div>
+    <h2 class="title">Три продукта.<br>Trade Marketing внутри Distribution.</h2>
+    <p class="subtitle">Маркетинг не выводится отдельным продуктом: он работает внутри дистрибуции, потому что промо, оборачиваемость, АКБ и sell-out завязаны на регион → клиент → пакет.</p>
+
+    <div class="prod-grid-three">
+      <div class="prod-card">
+        <div class="prod-icon prod-icon-green">🛒</div>
+        <div class="prod-num" style="color:var(--green)">Product 01</div>
+        <div class="prod-name">RetailGuard</div>
+        <div class="prod-desc">Автозаказ, ABC/XYZ, управление остатками, OOS, overstock, dead stock и приоритеты закупа по SKU.</div>
+        <ul class="prod-features">
+          <li>AutoOrder Engine P1/P2/P3</li>
+          <li>ABC/XYZ-анализ ассортимента</li>
+          <li>OOS и риск пустой полки</li>
+          <li>Overstock / Dead Stock / Frozen</li>
+          <li>Управление остатками по магазинам и SKU</li>
+        </ul>
+        <a href="retail.html" class="btn btn-green btn-sm" style="width:100%">Открыть RetailGuard →</a>
+      </div>
+
+      <div class="prod-card" style="border-color:var(--blue);border-width:1.5px">
+        <div class="prod-icon prod-icon-blue">🚚</div>
+        <div class="prod-num" style="color:var(--blue)">Product 02 · Core</div>
+        <div class="prod-name">DistributionGuard</div>
+        <div class="prod-desc">Заказы, перемещения между регионами и trade marketing-контур: оборачиваемость, промо, АКБ, план/факт и sell-out.</div>
+        <ul class="prod-features">
+          <li>Заказы поставщикам / филиалам</li>
+          <li>Перемещения между регионами</li>
+          <li>Trade Marketing внутри дистрибуции</li>
+          <li>Оборачиваемость, промо, sell-out</li>
+          <li>АКБ, клиенты, дистр-пакеты, GAP</li>
+        </ul>
+        <a href="distribution.html" class="btn btn-primary btn-sm" style="width:100%">Открыть DistributionGuard →</a>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-icon prod-icon-purple">🎯</div>
+        <div class="prod-num" style="color:var(--purple)">Product 03</div>
+        <div class="prod-name">SalesControl</div>
+        <div class="prod-desc">Задачи команде продаж, план дожима, контроль исполнения, RACI и ежедневный action-list.</div>
+        <ul class="prod-features">
+          <li>Кого дожать сегодня</li>
+          <li>Какие клиенты не заказали</li>
+          <li>Какие точки реактивировать</li>
+          <li>Задачи по региону и менеджеру</li>
+          <li>Контроль выполнения</li>
+        </ul>
+        <a href="sales.html" class="btn btn-outline btn-sm" style="width:100%">Открыть SalesControl →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container" style="text-align:center">
-    <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
-      <a href="index.html">Платформа</a>
-      <a href="commercial.html">DistributionGuard</a>
-      <a href="inventory.html">RetailGuard</a>
-      <a href="ceo.html">SalesControl</a>
-      <a href="contact.html">Контакт</a>
-    </div>
-    <p><strong style="color:#475569">ProfitGuard Platform</strong> · 2026 · Контакт: 
-      <strong style="color:#475569">Екатерина Денисова</strong> ·
-      <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> ·
-      <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a>
-    </p>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>ProfitGuard Platform · RetailGuard · DistributionGuard · SalesControl</div>
+    <div>Екатерина Денисова · <a href="tel:+77770090703">+7 777 009 07 03</a> · <a href="https://wa.me/77770090703" target="_blank">WhatsApp</a></div>
   </div>
 </footer>
 <script src="script.js"></script>

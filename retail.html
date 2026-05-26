@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RetailGuard — автозаказ, ABC и управление остатками</title>
+<meta name="description" content="Retail-модуль ProfitGuard Platform для автозаказа, ABC/XYZ, OOS, overstock и управления остатками.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Profit<span>Guard</span> Platform</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Платформа</a></li>
+      <li><a href="retail.html" class="active">RetailGuard</a></li>
+      <li><a href="distribution.html">DistributionGuard</a></li>
+      <li><a href="sales.html">SalesControl</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="contact.html" class="nav-cta">Контакт</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" style="padding-bottom:60px">
+  <div class="hero-tag" style="background:rgba(16,185,129,.2);border-color:rgba(16,185,129,.3);color:#34D399">🛒 RetailGuard</div>
+  <h1>RetailGuard<br><em>AutoOrder & Stock Control</em></h1>
+  <p class="hero-sub">Модуль для ритейла: автозаказ, ABC/XYZ-анализ, управление остатками, OOS, overstock, dead stock и приоритеты закупа по каждому SKU.</p>
+  <div class="hero-btns"><a href="demo.html#retail" class="btn btn-green">Открыть demo →</a><a href="contact.html" class="btn btn-ghost">Запустить пилот</a></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="label label-green">Что решает Retail</div>
+    <h2 class="title">От хаоса в остатках<br>к точному автозаказу.</h2>
+    <div class="feat-grid">
+      <div class="feat-item"><h4>AutoOrder Engine</h4><p>Расчёт заказа по ADS, остаткам, safety stock, целевому запасу и минимальной партии.</p></div>
+      <div class="feat-item"><h4>ABC/XYZ-анализ</h4><p>Фокус на A-SKU и стабильности спроса. C-хвост не должен замораживать деньги.</p></div>
+      <div class="feat-item"><h4>Управление остатками</h4><p>OOS, OOS-risk, overstock, dead stock и frozen capital по SKU и магазинам.</p></div>
+      <div class="feat-item"><h4>Приоритеты P1/P2/P3</h4><p>P1 — срочный заказ, P2 — дозаказ, P3 — плановое пополнение.</p></div>
+      <div class="feat-item"><h4>Availability топ-SKU</h4><p>Ходовой товар должен быть там, где спрос. Система показывает риск заранее.</p></div>
+      <div class="feat-item"><h4>Excel export</h4><p>Команда получает готовый список заказа и корректировок по SKU.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-off">
+  <div class="container">
+    <div class="label label-green">Demo preview</div>
+    <h2 class="title">Обезличенные данные<br>для демонстрации.</h2>
+    <div style="overflow-x:auto;border-radius:12px;border:1px solid var(--border)">
+      <table class="mock-table">
+        <thead><tr><th>Магазин</th><th>SKU</th><th>ABC</th><th>XYZ</th><th class="num">Остаток</th><th class="num">ADS</th><th class="num">DOH</th><th>Статус</th><th class="num">Заказ</th></tr></thead>
+        <tbody>
+          <tr><td>Store A</td><td>SKU-001</td><td>A</td><td>X</td><td class="num">0</td><td class="num">42</td><td class="num">0</td><td><span class="status s-oos">OOS</span></td><td class="num">1 260</td></tr>
+          <tr><td>Store B</td><td>SKU-014</td><td>A</td><td>Y</td><td class="num">35</td><td class="num">28</td><td class="num">1.3</td><td><span class="status s-risk">OOS risk</span></td><td class="num">805</td></tr>
+          <tr><td>Store C</td><td>SKU-088</td><td>C</td><td>Z</td><td class="num">1 840</td><td class="num">2</td><td class="num">920</td><td><span class="status s-over">Overstock</span></td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>ProfitGuard Platform · RetailGuard · DistributionGuard · SalesControl</div>
+    <div>Екатерина Денисова · <a href="tel:+77770090703">+7 777 009 07 03</a> · <a href="https://wa.me/77770090703" target="_blank">WhatsApp</a></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
