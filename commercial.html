@@ -3,212 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ProfitGuard Commercial Tower — Ежедневное управление продажами</title>
+<title>DistributionGuard — план/факт, клиенты, дистр-пакеты и АКБ</title>
+<meta name="description" content="Первый модуль ProfitGuard Platform для дистрибуции и B2B-продаж.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Profit<span>Guard</span> AI</a>
+    <a href="index.html" class="nav-logo">Profit<span>Guard</span> Platform</a>
     <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="commercial.html">Commercial Tower</a></li>
-      <li><a href="inventory.html">Inventory Tower</a></li>
-      <li><a href="ceo.html">CEO Tower</a></li>
-      <li><a href="contact.html" class="nav-cta">Запустить пилот</a></li>
+      <li><a href="index.html" class="">Платформа</a></li><li><a href="commercial.html" class="active">DistributionGuard</a></li><li><a href="inventory.html" class="">RetailGuard</a></li><li><a href="ceo.html" class="">SalesControl</a></li><li><a href="contact.html" class="nav-cta">Контакт</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="hero" style="padding-bottom:60px">
-  <div class="hero-tag" style="background:rgba(24,95,165,.25);border-color:rgba(147,197,253,.25);color:#93C5FD">📊 Управление продажами и план-фактом</div>
-  <h1>ProfitGuard<br><em>Commercial Tower</em></h1>
-  <p class="hero-sub">Платформа показывает, какие регионы, клиенты, дистр-пакеты и точки не закрывают план, где просел АКБ и сколько нужно продавать каждый день до конца месяца.</p>
+  <div class="hero-tag" style="background:rgba(24,95,165,.25);border-color:rgba(147,197,253,.25);color:#93C5FD">📊 DistributionGuard · модуль 01</div>
+  <h1>ProfitGuard<br><em>DistributionGuard</em></h1>
+  <p class="hero-sub">Модуль ежедневного план-факт контроля для дистрибуции: регионы, клиенты, дистр-пакеты, АКБ, прогноз закрытия месяца и план дожима.</p>
   <div class="hero-btns">
     <a href="contact.html" class="btn btn-primary">Запустить пилот →</a>
-    <a href="#tabs" class="btn btn-ghost">Смотреть платформу</a>
+    <a href="https://planfact-hvhj7mwmat9b4pssrlcjcr.streamlit.app/" target="_blank" class="btn btn-ghost">Открыть Demo MVP</a>
   </div>
   <div class="container">
     <div class="kpi-grid" style="margin-top:48px">
-      <div class="kpi-card"><div class="kpi-label">Факт месяца</div><div class="kpi-val" style="color:#93C5FD">X млн ₸</div><div class="kpi-sub">из плана Y млн ₸</div><div class="kpi-bar" style="background:#185FA5;width:62%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">Прогноз закрытия</div><div class="kpi-val" style="color:#F59E0B">XX%</div><div class="kpi-sub">run rate на месяц</div><div class="kpi-bar" style="background:#F59E0B;width:72%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">Нужно / день</div><div class="kpi-val" style="color:#10B981">X млн ₸</div><div class="kpi-sub">осталось N рабочих дней</div><div class="kpi-bar" style="background:#10B981;width:100%"></div></div>
-      <div class="kpi-card"><div class="kpi-label">АКБ под риском</div><div class="kpi-val" style="color:#EF4444">N точек</div><div class="kpi-sub">не сделали заказ в мае</div><div class="kpi-bar" style="background:#EF4444;width:25%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">План/Факт</div><div class="kpi-val" style="color:#93C5FD">каждый день</div><div class="kpi-sub">регионы, клиенты, пакеты</div><div class="kpi-bar" style="background:#185FA5;width:90%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Прогноз</div><div class="kpi-val" style="color:#F59E0B">run rate</div><div class="kpi-sub">до конца месяца</div><div class="kpi-bar" style="background:#F59E0B;width:72%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">АКБ</div><div class="kpi-val" style="color:#EF4444">точки риска</div><div class="kpi-sub">нет заказа / просели</div><div class="kpi-bar" style="background:#EF4444;width:55%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Action Plan</div><div class="kpi-val" style="color:#10B981">дожим</div><div class="kpi-sub">что делать сегодня</div><div class="kpi-bar" style="background:#10B981;width:100%"></div></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="tabs">
   <div class="container">
-    <div class="label">Платформа</div>
-    <h2 class="title">8 управленческих экранов.<br>Один источник правды.</h2>
-    <p class="subtitle">Commercial Tower переводит план продаж из статичного Excel в ежедневную систему управления исполнением.</p>
+    <div class="label">Что закрывает модуль</div>
+    <h2 class="title">От сырых выгрузок 1С<br>до плана действий команды.</h2>
+    <p class="subtitle">DistributionGuard — это развитие текущего Commercial Tower MVP в промышленный модуль платформы.</p>
 
     <div class="tabs-wrap">
       <div class="tabs-nav">
         <button class="tab-btn">Главный экран</button>
-        <button class="tab-btn">План / Факт</button>
-        <button class="tab-btn">По дням</button>
-        <button class="tab-btn">АКБ и точки</button>
         <button class="tab-btn">Клиенты</button>
-        <button class="tab-btn">Дистр пакеты</button>
-        <button class="tab-btn">План дожима</button>
+        <button class="tab-btn">Дистр-пакеты</button>
+        <button class="tab-btn">День / Декада</button>
+        <button class="tab-btn">АКБ</button>
         <button class="tab-btn">Динамика</button>
+        <button class="tab-btn">Export</button>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Коммерческий директор видит картину за 10 секунд</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">4 KPI + блок «Горит прямо сейчас» + компактная таблица регионов.</p>
-        <div class="alert-box alert-red">🔴 <strong>Регион A:</strong> прогноз закрытия 68% — нужно X млн/день. Осталось N дней.</div>
-        <div class="alert-box alert-amber">🟡 <strong>Регион B:</strong> ниже графика на 18%. GAP = X млн ₸.</div>
-        <div class="alert-box alert-green">✅ Регионы C, D, E идут в план. Прогноз ≥95%.</div>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border);margin-top:16px">
-          <table class="mock-table">
-            <thead><tr><th>Регион</th><th class="num">План</th><th class="num">Факт</th><th class="num">% вып</th><th class="num">Прогноз</th><th class="num">GAP</th><th class="num">Нужно/день</th></tr></thead>
-            <tbody>
-              <tr><td>Регион A</td><td class="num">XXX M</td><td class="num">XXX M</td><td class="num" style="color:var(--red)">45%</td><td class="num" style="color:var(--red)">68%</td><td class="num">XXX M</td><td class="num">XX M</td></tr>
-              <tr><td>Регион B</td><td class="num">XXX M</td><td class="num">XXX M</td><td class="num" style="color:var(--amber)">62%</td><td class="num" style="color:var(--amber)">82%</td><td class="num">XXX M</td><td class="num">XX M</td></tr>
-              <tr><td>Регион C</td><td class="num">XXX M</td><td class="num">XXX M</td><td class="num" style="color:var(--green)">91%</td><td class="num" style="color:var(--green)">97%</td><td class="num">XXX M</td><td class="num">XX M</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Коммерческий директор видит план и риск за 10 секунд</h3>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">План, факт, прогноз, план к дате, отклонение, GAP и нужный темп в день.</p>
+        <div class="alert-box alert-red">🔴 Регион ниже графика: прогноз закрытия 68%, нужен темп X млн ₸/день.</div>
+        <div class="alert-box alert-amber">🟡 Клиент просел к прошлому месяцу: потеря X млн ₸.</div>
+        <div class="alert-box alert-green">✅ Пакеты в норме: прогноз ≥95%, контроль удержания.</div>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Plan/Fact по регионам — ежедневно</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Факт, прогноз run rate, GAP до плана и нужный дневной темп по каждому региону.</p>
-        <div class="alert-box alert-blue">Формула прогноза: Факт / прошедшие рабочие дни × всего рабочих дней месяца</div>
-        <p style="font-size:12px;color:var(--muted);margin-top:12px">Загрузка: ПланФакт Excel — 1 раз в начале месяца. Факт продаж 1С — каждый день накопительно. Система сразу пересчитывает прогноз и GAP.</p>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Клиент → регион → GAP → действие</h3>
+        <p style="font-size:13px;color:var(--muted)">Система показывает основных клиентов из ПланФакт, факт текущего месяца из выгрузки 1С, прогноз и план дожима.</p>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Матрица продаж по дням</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Строки = регионы. Столбцы = дни месяца. Зелёный = ≥90% дневного плана. Красный = 0 в рабочий день.</p>
-        <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:16px;overflow-x:auto">
-          <div style="display:flex;gap:4px;flex-wrap:nowrap;min-width:600px">
-            <div style="min-width:80px;font-size:11px;font-weight:600;color:var(--muted);padding-top:24px">Регион A</div>
-            <div style="flex:1;display:grid;grid-template-columns:repeat(19,1fr);gap:3px">
-              <div style="text-align:center;font-size:9px;color:var(--muted)">1</div><div style="text-align:center;font-size:9px;color:var(--muted)">2</div><div style="text-align:center;font-size:9px;color:var(--muted)">3</div><div style="text-align:center;font-size:9px;color:var(--muted)">4</div><div style="text-align:center;font-size:9px;color:var(--muted)">5</div><div style="text-align:center;font-size:9px;color:var(--muted)">6</div><div style="text-align:center;font-size:9px;color:var(--muted)">7</div><div style="text-align:center;font-size:9px;color:var(--muted)">8</div><div style="text-align:center;font-size:9px;color:var(--muted)">9</div><div style="text-align:center;font-size:9px;color:var(--muted)">10</div><div style="text-align:center;font-size:9px;color:var(--muted)">11</div><div style="text-align:center;font-size:9px;color:var(--muted)">12</div><div style="text-align:center;font-size:9px;color:var(--muted)">13</div><div style="text-align:center;font-size:9px;color:var(--muted)">14</div><div style="text-align:center;font-size:9px;color:var(--muted)">15</div><div style="text-align:center;font-size:9px;color:var(--muted)">16</div><div style="text-align:center;font-size:9px;color:var(--muted)">17</div><div style="text-align:center;font-size:9px;color:var(--muted)">18</div><div style="text-align:center;font-size:9px;color:var(--muted)">19</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DBEAFE;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#1D4ED8">~</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#FEE2E2;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#991B1B">0</div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DBEAFE;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#1D4ED8">~</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#F8FAFC;border-radius:4px;height:28px;opacity:.4"></div>
-              <div style="background:#DCFCE7;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#15803D">✓</div>
-              <div style="background:#DBEAFE;border-radius:4px;height:28px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#1D4ED8">~</div>
-            </div>
-          </div>
-        </div>
-        <div style="display:flex;gap:14px;margin-top:10px;font-size:10px;color:var(--muted)">
-          <span><span style="display:inline-block;width:10px;height:10px;background:#DCFCE7;border-radius:2px;margin-right:4px"></span>≥90% плана</span>
-          <span><span style="display:inline-block;width:10px;height:10px;background:#DBEAFE;border-radius:2px;margin-right:4px"></span>Есть факт</span>
-          <span><span style="display:inline-block;width:10px;height:10px;background:#FEE2E2;border-radius:2px;margin-right:4px"></span>0 в рабочий день</span>
-          <span><span style="display:inline-block;width:10px;height:10px;background:#F8FAFC;border:1px solid var(--border);border-radius:2px;margin-right:4px"></span>Выходной</span>
-        </div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Пакеты ФУД / НОНФУД</h3>
+        <p style="font-size:13px;color:var(--muted)">Структура пакетов берётся из ПланФакт. Новая выгрузка меняет только факт текущего месяца, MoM, YoY, прогноз и GAP.</p>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">АКБ: апрель — эталон. Май — факт. Расхождение — действие.</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Платформа сравнивает апрель (эталон АКБ) с текущим маем и показывает какие точки выпали — и сколько они давали денег.</p>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:10px;padding:14px"><div style="font-size:10px;color:var(--muted);margin-bottom:4px">АЗС апрель</div><div style="font-size:20px;font-weight:700;color:var(--blue)">N точек</div></div>
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:10px;padding:14px"><div style="font-size:10px;color:var(--muted);margin-bottom:4px">АЗС май</div><div style="font-size:20px;font-weight:700;color:var(--green)">N точек</div></div>
-          <div style="background:#FEF2F2;border:0.5px solid #FECACA;border-radius:10px;padding:14px"><div style="font-size:10px;color:#7F1D1D;margin-bottom:4px">Без заказа</div><div style="font-size:20px;font-weight:700;color:var(--red)">N точек</div></div>
-          <div style="background:#FFFBEB;border:0.5px solid #FDE68A;border-radius:10px;padding:14px"><div style="font-size:10px;color:#78350F;margin-bottom:4px">Потеря продаж</div><div style="font-size:20px;font-weight:700;color:var(--amber)">X млн ₸</div></div>
-        </div>
-        <div class="alert-box alert-red">❌ N точек из апреля не сделали заказ в мае. В апреле они принесли X млн ₸ — первоочередной список для реактивации.</div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">День и декада — только из ПланФакт</h3>
+        <div class="alert-box alert-blue">План по дням и декадам не пересчитывается из продаж. Он является операционным графиком месяца.</div>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Клиенты — план/факт/прогноз с MoM и YoY</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Каждый ключевой клиент — отдельная вкладка. Внутри: KPI, прогресс-бар, разбивка по регионам.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-          <div style="background:var(--off);border:0.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600">Клиент A</div>
-          <div style="background:#E6F1FB;border:1.5px solid var(--blue);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;color:var(--blue)">Клиент B ●</div>
-          <div style="background:var(--off);border:0.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600">Клиент C</div>
-          <div style="background:var(--off);border:0.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600">Клиент D</div>
-        </div>
-        <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:18px">
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-            <div><div style="font-size:10px;color:var(--muted)">Факт</div><div style="font-size:18px;font-weight:700;color:var(--red)">XX%</div><div style="font-size:11px;color:var(--muted)">из X млн план</div></div>
-            <div><div style="font-size:10px;color:var(--muted)">Прогноз</div><div style="font-size:18px;font-weight:700;color:var(--amber)">YY%</div><div style="font-size:11px;color:var(--muted)">от плана</div></div>
-            <div><div style="font-size:10px;color:var(--muted)">MoM</div><div style="font-size:18px;font-weight:700;color:var(--green)">+X%</div><div style="font-size:11px;color:var(--muted)">к апрелю</div></div>
-            <div><div style="font-size:10px;color:var(--muted)">YoY</div><div style="font-size:18px;font-weight:700;color:var(--red)">−X%</div><div style="font-size:11px;color:var(--muted)">к маю 2025</div></div>
-          </div>
-        </div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">АКБ = адрес из «Заказ покупателя.АЗС (FRW)»</h3>
+        <p style="font-size:13px;color:var(--muted)">Апрель — эталон, май — факт. Система показывает потерянные, просевшие, новые и сохранённые точки.</p>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Дистр-пакеты ФУД и НОНФУД — с детализацией по регионам</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Карточки пакетов с прогресс-баром. Каждый пакет раскрывается до регионов с графиком план/факт.</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:14px">
-            <div style="font-size:12px;font-weight:600;margin-bottom:6px">Пакет A · ФУД</div>
-            <div style="height:4px;background:#F1F5F9;border-radius:2px;margin-bottom:5px"><div style="height:4px;width:48%;background:var(--red);border-radius:2px"></div></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)"><span>X млн ₸</span><span style="color:var(--red);font-weight:600">48%</span></div>
-          </div>
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:14px">
-            <div style="font-size:12px;font-weight:600;margin-bottom:6px">Пакет B · ФУД</div>
-            <div style="height:4px;background:#F1F5F9;border-radius:2px;margin-bottom:5px"><div style="height:4px;width:72%;background:var(--amber);border-radius:2px"></div></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)"><span>X млн ₸</span><span style="color:var(--amber);font-weight:600">72%</span></div>
-          </div>
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:14px">
-            <div style="font-size:12px;font-weight:600;margin-bottom:6px">Пакет C · НОНФУД</div>
-            <div style="height:4px;background:#F1F5F9;border-radius:2px;margin-bottom:5px"><div style="height:4px;width:91%;background:var(--green);border-radius:2px"></div></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)"><span>X млн ₸</span><span style="color:var(--green);font-weight:600">91%</span></div>
-          </div>
-        </div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Динамика по месяцам, годам, клиентам и пакетам</h3>
+        <p style="font-size:13px;color:var(--muted)">История берётся из ПланФакт. Текущая выгрузка обновляет только факт текущего месяца.</p>
       </div>
 
       <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Три секции дожима: сегодня / неделя / месяц</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Платформа сама расставляет приоритеты. Директор видит список действий — не 80 строк без порядка.</p>
-        <div class="alert-box alert-red" style="margin-bottom:8px">🔴 <strong>Сделать сегодня:</strong> Клиент B / Регион A · GAP X млн · нужно X млн/день · Реактивация</div>
-        <div class="alert-box alert-amber" style="margin-bottom:8px">🟡 <strong>На этой неделе:</strong> Клиент C / Регион B · прогноз 82% · дожать X млн</div>
-        <div class="alert-box alert-green" style="margin-bottom:8px">🟢 <strong>До конца месяца:</strong> Клиент D · GAP X млн · небольшой добор</div>
-      </div>
-
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Динамика продаж 2022–2026</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Сводная таблица год × регион. Выберите год для сравнения — платформа покажет Δ и YoY по каждому региону.</p>
-        <div class="alert-box alert-blue">MoM (май vs апрель): <strong>+X%</strong> &nbsp;·&nbsp; YoY (май 2026 vs май 2025): <strong>−X%</strong> — регрессия год к году — требует анализа причин.</div>
-        <p style="font-size:12px;color:var(--muted);margin-top:12px">График: линии по годам, текущий год жирной линией с подписями значений в M₸. Прошлые — пунктиром. Оси подписаны.</p>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Excel-экспорт как официальный отчёт</h3>
+        <p style="font-size:13px;color:var(--muted)">README, методология, источники загрузки, свод, регионы, дни, декады, клиенты, пакеты, АКБ и план дожима.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="cta-banner">
-  <div class="container">
-    <h2>Готовы видеть план-факт каждое утро?</h2>
-    <p>Загрузите ПланФакт Excel и выгрузку 1С — Commercial Tower выдаст прогноз, GAP и план дожима.</p>
-    <div style="margin-bottom:28px">
-      <div class="contact-name">Екатерина Денисова</div>
-      <a href="tel:+77770090703" class="contact-phone">+7 777 009 07 03</a>
+<footer>
+  <div class="container" style="text-align:center">
+    <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+      <a href="index.html">Платформа</a>
+      <a href="commercial.html">DistributionGuard</a>
+      <a href="inventory.html">RetailGuard</a>
+      <a href="ceo.html">SalesControl</a>
+      <a href="contact.html">Контакт</a>
     </div>
-    <div class="hero-btns">
-      <a href="https://wa.me/77770090703" target="_blank" class="btn btn-primary">Написать в WhatsApp →</a>
-      <a href="contact.html" class="btn btn-ghost">Запросить пилот</a>
-    </div>
+    <p><strong style="color:#475569">ProfitGuard Platform</strong> · 2026 · Контакт: 
+      <strong style="color:#475569">Екатерина Денисова</strong> ·
+      <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> ·
+      <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a>
+    </p>
   </div>
-</div>
-
-<footer><div class="container">
-  <div class="foot-links"><a href="index.html">Главная</a><a href="commercial.html">Commercial Tower</a><a href="inventory.html">Inventory Tower</a><a href="ceo.html">CEO Tower</a><a href="contact.html">Пилот</a></div>
-  <p><strong style="color:#475569">ProfitGuard AI</strong> · <strong style="color:#475569">Екатерина Денисова</strong> · <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> · <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a></p>
-</div></footer>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

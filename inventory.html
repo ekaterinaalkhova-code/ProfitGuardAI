@@ -3,324 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ProfitGuard Inventory Tower — Управление товарными запасами</title>
+<title>RetailGuard — управление retail, SKU, запасами и маржой</title>
+<meta name="description" content="Модуль ProfitGuard Platform для retail-зон, магазинов, SKU, остатков, OOS и frozen capital.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Profit<span>Guard</span> AI</a>
+    <a href="index.html" class="nav-logo">Profit<span>Guard</span> Platform</a>
     <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="commercial.html">Commercial Tower</a></li>
-      <li><a href="inventory.html">Inventory Tower</a></li>
-      <li><a href="ceo.html">CEO Tower</a></li>
-      <li><a href="contact.html" class="nav-cta">Запустить пилот</a></li>
+      <li><a href="index.html" class="">Платформа</a></li><li><a href="commercial.html" class="">DistributionGuard</a></li><li><a href="inventory.html" class="active">RetailGuard</a></li><li><a href="ceo.html" class="">SalesControl</a></li><li><a href="contact.html" class="nav-cta">Контакт</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="hero" style="padding-bottom:60px">
-  <div class="hero-tag" style="background:rgba(16,185,129,.2);border-color:rgba(16,185,129,.3);color:#34D399">📦 Управление товарными запасами</div>
-  <h1>ProfitGuard<br><em>Inventory Tower</em></h1>
-  <p class="hero-sub">Система показывает, какие товары нужно заказать, какие переместить, какие вывести, где возникнет OOS и где деньги компании лежат мертвым остатком.</p>
+  <div class="hero-tag" style="background:rgba(16,185,129,.2);border-color:rgba(16,185,129,.3);color:#34D399">🛒 RetailGuard · модуль 02</div>
+  <h1>ProfitGuard<br><em>RetailGuard</em></h1>
+  <p class="hero-sub">Модуль управления retail-ассортиментом: SKU, категории, магазины, остатки, OOS, overstock, frozen capital, автозаказ и перемещения.</p>
   <div class="hero-btns">
     <a href="contact.html" class="btn btn-green">Запустить пилот →</a>
-    <a href="#features" class="btn btn-ghost">Что решает платформа</a>
+    <a href="#features" class="btn btn-ghost">Что решает модуль</a>
   </div>
-
   <div class="container">
     <div class="kpi-grid" style="margin-top:48px">
-      <div class="kpi-card">
-        <div class="kpi-label">Стоимость склада</div>
-        <div class="kpi-val" style="color:#93C5FD">X млн ₸</div>
-        <div class="kpi-sub">под управлением</div>
-        <div class="kpi-bar" style="background:#185FA5;width:75%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Frozen capital</div>
-        <div class="kpi-val" style="color:#F59E0B">до −35%</div>
-        <div class="kpi-sub">после внедрения</div>
-        <div class="kpi-bar" style="background:#F59E0B;width:35%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">OOS закрывается</div>
-        <div class="kpi-val" style="color:#10B981">за 1 день</div>
-        <div class="kpi-sub">перемещением или заказом</div>
-        <div class="kpi-bar" style="background:#10B981;width:90%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Ручная аналитика</div>
-        <div class="kpi-val" style="color:#EF4444">−80%</div>
-        <div class="kpi-sub">автоматический расчёт</div>
-        <div class="kpi-bar" style="background:#EF4444;width:80%"></div>
-      </div>
+      <div class="kpi-card"><div class="kpi-label">OOS</div><div class="kpi-val" style="color:#EF4444">до потери продаж</div><div class="kpi-sub">риск виден заранее</div><div class="kpi-bar" style="background:#EF4444;width:80%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Frozen capital</div><div class="kpi-val" style="color:#F59E0B">под контролем</div><div class="kpi-sub">overstock + dead stock</div><div class="kpi-bar" style="background:#F59E0B;width:65%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Автозаказ</div><div class="kpi-val" style="color:#10B981">P1/P2/P3</div><div class="kpi-sub">приоритеты по SKU</div><div class="kpi-bar" style="background:#10B981;width:100%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Маржа</div><div class="kpi-val" style="color:#93C5FD">категории</div><div class="kpi-sub">что держать, что выводить</div><div class="kpi-bar" style="background:#185FA5;width:75%"></div></div>
     </div>
   </div>
 </section>
 
-<!-- WHAT IT SOLVES -->
 <section class="section-off" id="features">
   <div class="container">
-    <div class="label label-green">Что решает платформа</div>
-    <h2 class="title">10 задач которые закрывает<br>Inventory Tower</h2>
+    <div class="label label-green">RetailGuard</div>
+    <h2 class="title">Модуль для retail-зон,<br>магазинов и SKU-управления.</h2>
     <div class="feat-grid">
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#FEE2E2">🔴</div>
-        <h4>OOS и риск отсутствия товара</h4>
-        <p>Система рассчитывает дни запаса по каждому SKU. OOS-риск появляется за 7 дней до пустой полки — до потери продаж.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#EDE9FE">📦</div>
-        <h4>Overstock и избыточный запас</h4>
-        <p>Товар с DOH выше целевого получает статус Overstock и автоматически попадает в план промо или перемещения.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#F1F5F9">💀</div>
-        <h4>Dead stock и товар без движения</h4>
-        <p>SKU без продаж при наличии остатка помечается Dead. Платформа предлагает механику ликвидации или возврата поставщику.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#FEF3C7">💰</div>
-        <h4>Frozen capital</h4>
-        <p>Overstock + Dead превращаются в замороженный капитал. Система показывает точную сумму и план высвобождения денег.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#ECFDF5">🛒</div>
-        <h4>Автоматический расчёт заказа</h4>
-        <p>Заказ = ADS × целевой запас + ADS × страховой запас − текущий остаток. Приоритет P1 → P2 → P3 по каждому SKU.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#E6F1FB">🔄</div>
-        <h4>Перемещения между регионами</h4>
-        <p>Перед закупкой система проверяет: можно ли закрыть OOS внутренним перемещением. Сначала переместить — потом заказывать.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#FDF2F8">🎯</div>
-        <h4>Промо / возврат / ликвидация</h4>
-        <p>Каждый overstock и dead stock получает механику: bundle, markdown, возврат поставщику или вывод из ассортимента.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#ECFDF5">📊</div>
-        <h4>ABC/XYZ анализ</h4>
-        <p>Двойная классификация: ABC по деньгам и по штукам, XYZ по стабильности спроса. Приоритизация ассортимента по данным.</p>
-      </div>
-      <div class="feat-item">
-        <div class="feat-item-icon" style="background:#F5F3FF">📈</div>
-        <h4>Сравнение остатков YoY</h4>
-        <p>Руководитель видит: стало ли управление запасами лучше по сравнению с прошлым периодом. Склад, frozen, OOS, DOH.</p>
-      </div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#FEE2E2">🔴</div><h4>OOS и риск пустой полки</h4><p>Система показывает, где товар закончится и сколько продаж будет потеряно.</p></div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#FEF3C7">💰</div><h4>Frozen capital</h4><p>Overstock и dead stock превращаются в список действий по высвобождению денег.</p></div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#ECFDF5">🛒</div><h4>Автоматический заказ</h4><p>ADS × целевой запас + страховой запас − текущий остаток.</p></div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#E6F1FB">🔄</div><h4>Перемещения</h4><p>Перед закупкой система проверяет, можно ли закрыть дефицит внутренним перемещением.</p></div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#F5F3FF">📊</div><h4>ABC/XYZ</h4><p>Классификация ассортимента по деньгам, штукам и стабильности спроса.</p></div>
+      <div class="feat-item"><div class="feat-item-icon" style="background:#FDF2F8">🎯</div><h4>Промо / вывод</h4><p>Каждый проблемный SKU получает механику: bundle, markdown, возврат или вывод.</p></div>
     </div>
   </div>
 </section>
-
-<!-- TABS -->
-<section class="section">
-  <div class="container">
-    <div class="label label-green">Аналитические модули</div>
-    <h2 class="title">14 экранов управления<br>в одной платформе</h2>
-    <p class="subtitle">Каждый модуль решает конкретную задачу — от CEO-сводки до детального списка SKU для заказа.</p>
-
-    <div class="tabs-wrap">
-      <div class="tabs-nav">
-        <button class="tab-btn">CEO Dashboard</button>
-        <button class="tab-btn">Stock Control</button>
-        <button class="tab-btn">Order Engine</button>
-        <button class="tab-btn">Transfer Plan</button>
-        <button class="tab-btn">Промо / Ликвидация</button>
-        <button class="tab-btn">ABC / XYZ</button>
-        <button class="tab-btn">YoY Сравнение</button>
-      </div>
-
-      <!-- CEO Dashboard -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">CEO видит управленческую картину, а не таблицу остатков</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:20px">Где лежат деньги, где теряются продажи и какие действия нужны команде сегодня.</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px">
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--card-shadow)">
-            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Складской капитал</div>
-            <div style="font-size:22px;font-weight:700;color:var(--blue)">X млн ₸</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:3px">стоимость всех остатков</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--card-shadow)">
-            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Frozen capital</div>
-            <div style="font-size:22px;font-weight:700;color:var(--amber)">X млн ₸</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:3px">overstock + dead stock</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--card-shadow)">
-            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Рекомендованный заказ</div>
-            <div style="font-size:22px;font-weight:700;color:var(--green)">X млн ₸</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:3px">P1 + P2 + P3 SKU</div>
-          </div>
-        </div>
-        <div class="alert-box alert-red">⚠️ Платформа выявляет критичные OOS A-класса и показывает сумму потерянных продаж. CEO видит это первым.</div>
-        <div class="alert-box alert-amber">💡 Система находит N SKU для перемещения между регионами — без дополнительного закупа.</div>
-      </div>
-
-      <!-- Stock Control -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Каждый SKU получает статус и действие</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:20px">ADS, DOH, статус, стоимость склада, frozen — по каждой позиции в каждом регионе.</p>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border)">
-          <table class="mock-table">
-            <thead><tr>
-              <th>Регион</th><th>Поставщик</th><th>SKU</th><th>ABC</th><th>XYZ</th>
-              <th class="num">Остаток</th><th class="num">ADS</th><th class="num">DOH</th>
-              <th>Статус</th><th class="num">Склад ₸</th><th class="num">Frozen ₸</th>
-            </tr></thead>
-            <tbody>
-              <tr><td>Регион A</td><td>Поставщик 1</td><td>SKU-001</td><td>A</td><td>X</td><td class="num">0</td><td class="num">45.2</td><td class="num">0</td><td><span class="status s-oos">OOS</span></td><td class="num">0</td><td class="num">0</td></tr>
-              <tr><td>Регион B</td><td>Поставщик 2</td><td>SKU-002</td><td>A</td><td>Y</td><td class="num">28</td><td class="num">38.1</td><td class="num">4.8</td><td><span class="status s-risk">OOS риск</span></td><td class="num">XXX</td><td class="num">0</td></tr>
-              <tr><td>Регион A</td><td>Поставщик 1</td><td>SKU-003</td><td>B</td><td>X</td><td class="num">412</td><td class="num">12.0</td><td class="num">34.3</td><td><span class="status s-ok">OK</span></td><td class="num">XXX</td><td class="num">0</td></tr>
-              <tr><td>Регион C</td><td>Поставщик 3</td><td>SKU-004</td><td>C</td><td>Z</td><td class="num">1 840</td><td class="num">3.2</td><td class="num">181</td><td><span class="status s-over">Overstock</span></td><td class="num">XXX</td><td class="num">XXX</td></tr>
-              <tr><td>Регион B</td><td>Поставщик 2</td><td>SKU-005</td><td>C</td><td>Z</td><td class="num">560</td><td class="num">0</td><td class="num">999</td><td><span class="status s-dead">Dead</span></td><td class="num">XXX</td><td class="num">XXX</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="font-size:11px;color:var(--muted);margin-top:10px">Команда больше не спорит, что делать с товаром. Статус определяет действие автоматически.</p>
-      </div>
-
-      <!-- Order Engine -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Система рассчитывает сколько заказать и в каком приоритете</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Не просто дефицит — точное количество, сумма и приоритет P1/P2/P3 для каждого SKU.</p>
-        <div class="alert-box alert-blue" style="margin-bottom:16px">
-          <strong>Формула:</strong> Заказ = ADS × целевой запас + ADS × страховой запас − текущий остаток
-        </div>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border)">
-          <table class="mock-table">
-            <thead><tr>
-              <th>Приоритет</th><th>Регион</th><th>SKU</th><th>ABC</th><th>Статус</th>
-              <th class="num">Остаток</th><th class="num">Целевой</th><th class="num">Заказ шт</th><th class="num">Сумма ₸</th>
-            </tr></thead>
-            <tbody>
-              <tr><td><span class="status" style="background:#FEE2E2;color:#991B1B">P1 Срочный</span></td><td>Регион A</td><td>SKU-001</td><td>A</td><td><span class="status s-oos">OOS</span></td><td class="num">0</td><td class="num">1 356</td><td class="num">1 356</td><td class="num">XXX</td></tr>
-              <tr><td><span class="status" style="background:#FEF3C7;color:#92400E">P2 Дозаказ</span></td><td>Регион B</td><td>SKU-002</td><td>A</td><td><span class="status s-risk">OOS риск</span></td><td class="num">28</td><td class="num">1 143</td><td class="num">1 115</td><td class="num">XXX</td></tr>
-              <tr><td><span class="status" style="background:#DCFCE7;color:#15803D">P3 Плановый</span></td><td>Регион C</td><td>SKU-006</td><td>B</td><td><span class="status s-ok">OK</span></td><td class="num">198</td><td class="num">360</td><td class="num">162</td><td class="num">XXX</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-          <div style="background:var(--off);border-radius:8px;padding:10px 14px;font-size:12px"><strong>P1 Срочный</strong> — OOS A-класс</div>
-          <div style="background:var(--off);border-radius:8px;padding:10px 14px;font-size:12px"><strong>P2 Дозаказ</strong> — OOS риск A/B</div>
-          <div style="background:var(--off);border-radius:8px;padding:10px 14px;font-size:12px"><strong>P3 Плановый</strong> — плановое пополнение</div>
-        </div>
-      </div>
-
-      <!-- Transfer Plan -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Сначала переместить — потом закупать</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Платформа находит SKU где в одном регионе overstock, в другом — OOS. Перемещение закрывает дефицит без дополнительного закупа.</p>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border)">
-          <table class="mock-table">
-            <thead><tr>
-              <th>SKU</th><th>Из региона</th><th>В регион</th><th class="num">Доступно шт</th><th class="num">Нужно шт</th><th class="num">Переместить шт</th><th class="num">Эффект ₸</th><th>Причина</th>
-            </tr></thead>
-            <tbody>
-              <tr><td>SKU-004</td><td>Регион C</td><td>Регион A</td><td class="num">840</td><td class="num">300</td><td class="num">300</td><td class="num" style="color:var(--green)">+XXX</td><td>Закрыть OOS до нового заказа</td></tr>
-              <tr><td>SKU-007</td><td>Регион D</td><td>Регион B</td><td class="num">215</td><td class="num">215</td><td class="num">215</td><td class="num" style="color:var(--green)">+XXX</td><td>Закрыть OOS до нового заказа</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="alert-box alert-green" style="margin-top:14px">Перемещения высвобождают X млн ₸ без новых закупок. Система формирует задание для логистики автоматически.</div>
-      </div>
-
-      <!-- Promo -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Товар без движения превращается в план высвобождения денег</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">SKU с overstock и dead stock получают механику: промо, уценка, bundle, возврат поставщику или вывод из ассортимента.</p>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border)">
-          <table class="mock-table">
-            <thead><tr>
-              <th>Приоритет</th><th>Регион</th><th>SKU</th><th>ABC</th><th class="num">DOH</th><th class="num">Frozen ₸</th><th>Механика</th><th class="num">Высвобождение ₸</th>
-            </tr></thead>
-            <tbody>
-              <tr><td><span class="status s-oos">P1 Ликвидация</span></td><td>Регион B</td><td>SKU-005</td><td>C</td><td class="num">999</td><td class="num">XXX</td><td>Возврат / глубокая уценка</td><td class="num" style="color:var(--green)">+XXX</td></tr>
-              <tr><td><span class="status s-risk">P1 Капитал</span></td><td>Регион A</td><td>SKU-008</td><td>A</td><td class="num">210</td><td class="num">XXX</td><td>Bundle 2+1 без разрушения цены</td><td class="num" style="color:var(--green)">+XXX</td></tr>
-              <tr><td><span class="status s-over">P2 Ускорить</span></td><td>Регион C</td><td>SKU-004</td><td>C</td><td class="num">181</td><td class="num">XXX</td><td>Markdown / клиентское промо</td><td class="num" style="color:var(--green)">+XXX</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- ABC/XYZ -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Платформа отделяет товары, которые делают деньги, от тех что занимают склад</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:20px">Двойная классификация: ABC по деньгам и по штукам, XYZ по стабильности спроса за 5 месяцев.</p>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border);margin-bottom:16px">
-          <table class="mock-table">
-            <thead><tr>
-              <th></th><th>X — стабильный</th><th>Y — сезонный</th><th>Z — нестабильный</th>
-            </tr></thead>
-            <tbody>
-              <tr>
-                <td style="font-weight:700;color:var(--blue)">A</td>
-                <td><span class="status s-ok">✅ AutoOrder, защита OOS</span></td>
-                <td><span class="status s-risk">📅 Сезонный коэффициент</span></td>
-                <td><span class="status s-risk">⚠️ Промо или пересмотр</span></td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--muted)">B</td>
-                <td>📦 MIN/MAX контроль</td>
-                <td>📊 Мониторинг тренда</td>
-                <td>🔄 Переместить или промо</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--muted)">C</td>
-                <td>📉 Сократить запас</td>
-                <td>🔻 Минимум на полке</td>
-                <td><span class="status s-dead">↩️ Вернуть поставщику</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="font-size:12px;color:var(--muted)">ABC рассчитывается дважды — по деньгам и по штукам. Расхождение между двумя классификациями выявляет низкомаржинальные высокооборотные позиции.</p>
-      </div>
-
-      <!-- YoY -->
-      <div class="tab-content">
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">Стало ли управление запасами лучше за год?</h3>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Сравнение остатков, frozen capital, OOS и DOH с прошлым годом. Система делает вывод сама.</p>
-        <div style="overflow-x:auto;border-radius:12px;border:0.5px solid var(--border)">
-          <table class="mock-table">
-            <thead><tr>
-              <th>Регион</th><th class="num">Склад прошл.</th><th class="num">Склад текущ.</th><th class="num">Δ склад</th><th class="num">Frozen прошл.</th><th class="num">Frozen текущ.</th><th class="num">Δ frozen</th><th class="num">OOS прошл.</th><th class="num">OOS текущ.</th><th>Вывод</th>
-            </tr></thead>
-            <tbody>
-              <tr><td>Регион A</td><td class="num">XXX</td><td class="num">XXX</td><td class="num" style="color:var(--green)">−XXX</td><td class="num">XXX</td><td class="num">XXX</td><td class="num" style="color:var(--green)">−XXX</td><td class="num">12</td><td class="num">5</td><td><span class="status s-ok">Управление лучше</span></td></tr>
-              <tr><td>Регион B</td><td class="num">XXX</td><td class="num">XXX</td><td class="num" style="color:var(--red)">+XXX</td><td class="num">XXX</td><td class="num">XXX</td><td class="num" style="color:var(--red)">+XXX</td><td class="num">3</td><td class="num">8</td><td><span class="status s-risk">Вырос frozen</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="alert-box alert-blue" style="margin-top:14px">Формат загрузки исторических данных: отчёт 1С с метриками «Конечный остаток», «Реализовано товара», «Запас» по регионам.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="cta-banner">
-  <div class="container">
-    <h2>Готовы увидеть свои запасы через Inventory Tower?</h2>
-    <p>Загрузите остатки и продажи — платформа выдаст OOS, frozen, заказ и перемещения за минуты.</p>
-    <div style="margin-bottom:28px">
-      <div class="contact-name">Екатерина Денисова</div>
-      <a href="tel:+77770090703" class="contact-phone">+7 777 009 07 03</a>
-    </div>
-    <div class="hero-btns">
-      <a href="https://wa.me/77770090703" target="_blank" class="btn btn-green">Написать в WhatsApp →</a>
-      <a href="contact.html" class="btn btn-ghost">Запросить пилот</a>
-    </div>
-  </div>
-</div>
 
 <footer>
-  <div class="container">
-    <div class="foot-links">
-      <a href="index.html">Главная</a><a href="commercial.html">Commercial Tower</a>
-      <a href="inventory.html">Inventory Tower</a><a href="ceo.html">CEO Tower</a><a href="contact.html">Пилот</a>
+  <div class="container" style="text-align:center">
+    <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+      <a href="index.html">Платформа</a>
+      <a href="commercial.html">DistributionGuard</a>
+      <a href="inventory.html">RetailGuard</a>
+      <a href="ceo.html">SalesControl</a>
+      <a href="contact.html">Контакт</a>
     </div>
-    <p><strong style="color:#475569">ProfitGuard AI</strong> · <strong style="color:#475569">Екатерина Денисова</strong> · <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> · <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a></p>
+    <p><strong style="color:#475569">ProfitGuard Platform</strong> · 2026 · Контакт: 
+      <strong style="color:#475569">Екатерина Денисова</strong> ·
+      <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> ·
+      <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a>
+    </p>
   </div>
 </footer>
 <script src="script.js"></script>

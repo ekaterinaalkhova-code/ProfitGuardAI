@@ -3,275 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ProfitGuard AI — Система управления деньгами в продажах и запасах</title>
+<title>ProfitGuard Platform — коммерческая control tower для ритейла, дистрибуции и sales-команд</title>
+<meta name="description" content="Единая платформа управления продажами, запасами, АКБ, план-фактом и действиями команды.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Profit<span>Guard</span> AI</a>
+    <a href="index.html" class="nav-logo">Profit<span>Guard</span> Platform</a>
     <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="commercial.html">Commercial Tower</a></li>
-      <li><a href="inventory.html">Inventory Tower</a></li>
-      <li><a href="ceo.html">CEO Tower</a></li>
-      <li><a href="contact.html" class="nav-cta">Запустить пилот</a></li>
+      <li><a href="index.html" class="active">Платформа</a></li><li><a href="commercial.html" class="">DistributionGuard</a></li><li><a href="inventory.html" class="">RetailGuard</a></li><li><a href="ceo.html" class="">SalesControl</a></li><li><a href="contact.html" class="nav-cta">Контакт</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">B2B платформа для CEO, коммерции и операций</div>
-  <h1>ProfitGuard AI —<br><em>система управления деньгами</em><br>в продажах и запасах</h1>
-  <p class="hero-sub">Платформа показывает, где бизнес теряет продажи, где заморожены деньги, какие SKU нужно заказать, какие остатки вывести, какие регионы не закрывают план — и что делать сегодня.</p>
+  <div class="hero-tag">B2B Platform · Retail · Distribution · Sales Control</div>
+  <h1>ProfitGuard Platform —<br><em>единый контур управления деньгами</em><br>в продажах, запасах и командах</h1>
+  <p class="hero-sub">Платформа показывает, где бизнес теряет продажи, где заморожены деньги, какие клиенты и точки выпадают, какие SKU требуют действия — и что команда должна сделать сегодня.</p>
   <div class="hero-btns">
     <a href="contact.html" class="btn btn-primary">Запустить пилот →</a>
-    <a href="inventory.html" class="btn btn-ghost">Открыть Inventory Tower</a>
-    <a href="commercial.html" class="btn btn-ghost">Смотреть продукты</a>
+    <a href="#modules" class="btn btn-ghost">Смотреть модули</a>
+    <a href="#plans" class="btn btn-ghost">Тарифы и доступы</a>
   </div>
-
-  <!-- KPI strip -->
   <div class="container">
     <div class="kpi-grid" style="margin-top:56px">
-      <div class="kpi-card">
-        <div class="kpi-label">Frozen capital</div>
-        <div class="kpi-val" style="color:#F59E0B">под контролем</div>
-        <div class="kpi-sub">До −35% замороженных денег</div>
-        <div class="kpi-bar" style="background:#F59E0B;width:65%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">OOS-риск</div>
-        <div class="kpi-val" style="color:#EF4444">виден заранее</div>
-        <div class="kpi-sub">До того как потеряны продажи</div>
-        <div class="kpi-bar" style="background:#EF4444;width:80%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">План/Факт</div>
-        <div class="kpi-val" style="color:#10B981">каждый день</div>
-        <div class="kpi-sub">Регионы, клиенты, пакеты, точки</div>
-        <div class="kpi-bar" style="background:#10B981;width:90%"></div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Action-list</div>
-        <div class="kpi-val" style="color:#93C5FD">для команды</div>
-        <div class="kpi-sub">Заказ, перемещение, промо, дожим</div>
-        <div class="kpi-bar" style="background:#185FA5;width:100%"></div>
-      </div>
+      <div class="kpi-card"><div class="kpi-label">Commercial Control</div><div class="kpi-val" style="color:#93C5FD">план/факт</div><div class="kpi-sub">регионы, клиенты, пакеты, АКБ</div><div class="kpi-bar" style="background:#185FA5;width:90%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Retail & Inventory</div><div class="kpi-val" style="color:#10B981">OOS / frozen</div><div class="kpi-sub">SKU, остатки, заказ, перемещения</div><div class="kpi-bar" style="background:#10B981;width:85%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Sales Action</div><div class="kpi-val" style="color:#F59E0B">дожим</div><div class="kpi-sub">кому звонить, что вернуть, что продать</div><div class="kpi-bar" style="background:#F59E0B;width:100%"></div></div>
+      <div class="kpi-card"><div class="kpi-label">AI/BI Core</div><div class="kpi-val" style="color:#EF4444">без ручного Excel</div><div class="kpi-sub">1С / Excel → управленческий dashboard</div><div class="kpi-bar" style="background:#EF4444;width:80%"></div></div>
     </div>
   </div>
 </section>
 
-<!-- 3 PRODUCTS -->
-<section class="section">
+<section class="section" id="modules">
   <div class="container">
-    <div class="label">Продуктовая линейка</div>
-    <h2 class="title">Три платформы.<br>Один контур управления бизнесом.</h2>
-    <p class="subtitle">Каждый модуль работает самостоятельно или как единая система от продаж до склада.</p>
+    <div class="label">Архитектура платформы</div>
+    <h2 class="title">Три продукта.<br>Одна платформа и единый Core.</h2>
+    <p class="subtitle">Каждый модуль можно продавать отдельно или подключать по подписке в едином кабинете ProfitGuard Platform.</p>
 
     <div class="prod-grid">
-
-      <!-- Commercial Tower -->
       <div class="prod-card">
         <div class="prod-card-head">
           <div class="prod-icon prod-icon-blue">📊</div>
           <div class="prod-num" style="color:var(--blue)">Модуль 01</div>
-          <div class="prod-name">Commercial Tower</div>
-          <div class="prod-desc">Ежедневное управление продажами, план-фактом, АКБ, регионами, клиентами и дожимом плана до конца месяца.</div>
+          <div class="prod-name">DistributionGuard</div>
+          <div class="prod-desc">План/факт для дистрибуции: регионы, клиенты, дистр-пакеты, АКБ, прогноз месяца и план дожима.</div>
         </div>
         <div class="prod-card-body">
           <ul class="prod-features feat-blue">
             <li>Plan/Fact по регионам и клиентам</li>
             <li>АКБ: потерянные и просевшие точки</li>
             <li>Дистр-пакеты ФУД / НОНФУД</li>
-            <li>Динамика продаж год × регион</li>
-            <li>План дожима: сегодня / неделя / месяц</li>
+            <li>Динамика по месяцам и годам</li>
+            <li>План дожима до конца месяца</li>
             <li>Excel-экспорт одной кнопкой</li>
           </ul>
-          <a href="commercial.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть Commercial Tower →</a>
+          <a href="commercial.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть DistributionGuard →</a>
         </div>
       </div>
 
-      <!-- Inventory Tower -->
       <div class="prod-card" style="border-color:var(--green);border-width:1.5px">
         <div class="prod-card-head">
-          <div class="prod-icon prod-icon-green">📦</div>
-          <div class="prod-num" style="color:var(--green)">Модуль 02 · Флагман</div>
-          <div class="prod-name">Inventory Tower</div>
-          <div class="prod-desc">Интеллектуальное управление товарными запасами, OOS, overstock, frozen capital, автозаказом и перемещениями.</div>
+          <div class="prod-icon prod-icon-green">🛒</div>
+          <div class="prod-num" style="color:var(--green)">Модуль 02</div>
+          <div class="prod-name">RetailGuard</div>
+          <div class="prod-desc">Управление retail-ассортиментом, SKU, остатками, OOS, overstock, frozen capital и автоматическим заказом.</div>
         </div>
         <div class="prod-card-body">
           <ul class="prod-features feat-green">
-            <li>OOS / Overstock / Dead — статус каждого SKU</li>
-            <li>ABC/XYZ — приоритизация ассортимента</li>
-            <li>Автозаказ P1/P2/P3 с суммой и приоритетом</li>
-            <li>Перемещения — сначала переместить, потом закупать</li>
+            <li>SKU / категории / магазины</li>
+            <li>OOS / Overstock / Dead stock</li>
+            <li>ABC/XYZ и скорость продаж</li>
+            <li>Автозаказ P1/P2/P3</li>
+            <li>Перемещения между точками</li>
             <li>Промо / возврат / ликвидация</li>
-            <li>YoY: сравнение остатков год к году</li>
           </ul>
-          <a href="inventory.html" class="btn btn-green btn-sm" style="width:100%;justify-content:center">Открыть Inventory Tower →</a>
+          <a href="inventory.html" class="btn btn-green btn-sm" style="width:100%;justify-content:center">Открыть RetailGuard →</a>
         </div>
       </div>
 
-      <!-- CEO Tower -->
       <div class="prod-card">
         <div class="prod-card-head">
-          <div class="prod-icon prod-icon-purple">🏛️</div>
+          <div class="prod-icon prod-icon-purple">⚡</div>
           <div class="prod-num" style="color:var(--purple)">Модуль 03</div>
-          <div class="prod-name">CEO Control Tower</div>
-          <div class="prod-desc">Единый управленческий экран для CEO и собственника: продажи, запасы, деньги, риски и действия команды.</div>
+          <div class="prod-name">SalesControl Tower</div>
+          <div class="prod-desc">Ежедневный action-list для sales-команды: кого дожать, какие точки вернуть, где план под угрозой.</div>
         </div>
         <div class="prod-card-body">
           <ul class="prod-features feat-purple">
-            <li>Executive Summary — 5 ключевых вопросов</li>
-            <li>Money at Risk — где заморожены деньги</li>
-            <li>Sales Risk — где не закрывается план</li>
-            <li>Inventory Risk — OOS и overstock</li>
-            <li>Team Action Plan — что делает команда</li>
-            <li>Board Report — для совета директоров</li>
+            <li>Задачи региональным менеджерам</li>
+            <li>Клиенты риска и потерянные точки</li>
+            <li>План дожима сегодня / неделя / месяц</li>
+            <li>Контроль выполнения действий</li>
+            <li>Роли CEO / директор / регион</li>
+            <li>Board-ready summary</li>
           </ul>
-          <a href="ceo.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть CEO Tower →</a>
+          <a href="ceo.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Открыть SalesControl →</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- WHY -->
 <section class="section-dark">
   <div class="container">
-    <div class="label" style="color:#93C5FD">Почему это покупают</div>
-    <h2 class="title title-white">Не аналитика ради аналитики.<br>Система действий.</h2>
+    <div class="label" style="color:#93C5FD">ProfitGuard Core</div>
+    <h2 class="title title-white">Один технологический слой<br>для всех модулей.</h2>
     <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">💰</div>
-        <div class="why-text">
-          <h4>Руководитель видит деньги, а не отчёты</h4>
-          <p>Не таблицы с данными, а управленческая картина: где лежат деньги, где они теряются и что нужно изменить сегодня.</p>
+      <div class="why-item"><div class="why-icon">📥</div><div class="why-text"><h4>Upload Center</h4><p>ПланФакт, 1С, Excel/CSV, ежедневные выгрузки и проверка структуры файлов.</p></div></div>
+      <div class="why-item"><div class="why-icon">🔐</div><div class="why-text"><h4>Роли и доступы</h4><p>CEO видит всё, региональный менеджер — только свой контур, viewer — только просмотр.</p></div></div>
+      <div class="why-item"><div class="why-icon">🧠</div><div class="why-text"><h4>AI/BI выводы</h4><p>Платформа не просто считает KPI, а формирует выводы и action-list для команды.</p></div></div>
+      <div class="why-item"><div class="why-icon">📤</div><div class="why-text"><h4>Export Engine</h4><p>Excel/PDF-отчёты с README, методологией и источниками загрузки.</p></div></div>
+      <div class="why-item"><div class="why-icon">🧾</div><div class="why-text"><h4>История загрузок</h4><p>Каждая загрузка сохраняется как версия. Видно, какие данные изменили факт.</p></div></div>
+      <div class="why-item"><div class="why-icon">🛡️</div><div class="why-text"><h4>Data Leak Prevention</h4><p>Корпоративная логика обработки данных, контроль источников и разграничение доступа.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-off" id="plans">
+  <div class="container">
+    <div class="label">Подписки и доступы</div>
+    <h2 class="title">Клиент покупает не всё сразу,<br>а нужный уровень контроля.</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px">
+      <div class="prod-card">
+        <div class="prod-card-head">
+          <div class="prod-num" style="color:var(--blue)">Starter</div>
+          <div class="prod-name">1 модуль</div>
+          <div class="prod-desc">Для первого пилота и малой команды.</div>
+        </div>
+        <div class="prod-card-body">
+          <ul class="prod-features feat-blue">
+            <li>1 компания</li><li>ручная загрузка Excel</li><li>1 модуль на выбор</li><li>Dashboard + Excel export</li>
+          </ul>
+          <div style="font-size:22px;font-weight:700;color:var(--text)">300–700 тыс ₸ / мес</div>
         </div>
       </div>
-      <div class="why-item">
-        <div class="why-icon">⚡</div>
-        <div class="why-text">
-          <h4>Команда получает конкретные действия</h4>
-          <p>Не "разберитесь с остатками", а конкретный список: заказать N SKU, переместить M единиц, вывести K позиций на промо.</p>
+      <div class="prod-card" style="border-color:var(--green);border-width:1.5px">
+        <div class="prod-card-head">
+          <div class="prod-num" style="color:var(--green)">Business</div>
+          <div class="prod-name">2 модуля + роли</div>
+          <div class="prod-desc">Для региональных компаний и B2B-команд.</div>
+        </div>
+        <div class="prod-card-body">
+          <ul class="prod-features feat-green">
+            <li>до 10 пользователей</li><li>история загрузок</li><li>роли и регионы</li><li>АКБ / динамика / action-list</li>
+          </ul>
+          <div style="font-size:22px;font-weight:700;color:var(--text)">1–2,5 млн ₸ / мес</div>
         </div>
       </div>
-      <div class="why-item">
-        <div class="why-icon">📅</div>
-        <div class="why-text">
-          <h4>План-факт контролируется ежедневно</h4>
-          <p>Не раз в неделю на совещании, а каждое утро: регионы, клиенты, точки. GAP виден до того, как месяц закончился.</p>
+      <div class="prod-card">
+        <div class="prod-card-head">
+          <div class="prod-num" style="color:var(--purple)">Enterprise</div>
+          <div class="prod-name">Вся платформа</div>
+          <div class="prod-desc">Для сетей, дистрибьюторов и холдингов.</div>
         </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🏦</div>
-        <div class="why-text">
-          <h4>Остатки превращаются в управляемый капитал</h4>
-          <p>Frozen money получает план высвобождения. Overstock — механику промо. Dead stock — маршрут возврата поставщику.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🔍</div>
-        <div class="why-text">
-          <h4>OOS виден до потери продаж</h4>
-          <p>Платформа рассчитывает дни запаса по каждому SKU и регионам. OOS-риск появляется в системе за 7 дней до пустой полки.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">📊</div>
-        <div class="why-text">
-          <h4>Excel перестаёт быть центром хаоса</h4>
-          <p>Выгрузка 1С или CSV загружается в платформу. Система рассчитывает всё: ABC, XYZ, DOH, заказ, frozen, перемещения.</p>
+        <div class="prod-card-body">
+          <ul class="prod-features feat-purple">
+            <li>все модули</li><li>API / 1С-интеграция</li><li>SLA и админ-панель</li><li>кастомные отчёты</li>
+          </ul>
+          <div style="font-size:22px;font-weight:700;color:var(--text)">от 3 млн ₸ / мес</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DASHBOARD PREVIEW -->
-<section class="section-off">
-  <div class="container">
-    <div class="label label-green">Как выглядит платформа</div>
-    <h2 class="title">Данные превращаются<br>в управленческое решение</h2>
-
-    <div class="dash-mock" style="max-width:820px;margin:40px auto 0">
-      <div class="dash-bar">
-        <div class="dash-dot" style="background:#EF4444"></div>
-        <div class="dash-dot" style="background:#F59E0B"></div>
-        <div class="dash-dot" style="background:#10B981"></div>
-        <span class="dash-title">ProfitGuard AI · Inventory Tower · Сводка</span>
-      </div>
-      <div class="dash-body" style="grid-template-columns:repeat(3,1fr)">
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">Склад ₸</div>
-          <div class="dash-kpi-val" style="color:#93C5FD">X млн ₸</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">текущая стоимость</div>
-          <div class="dash-kpi-bar" style="background:#185FA5;width:75%"></div>
-        </div>
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">Frozen capital</div>
-          <div class="dash-kpi-val" style="color:#F59E0B">X млн ₸</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">overstock + dead</div>
-          <div class="dash-kpi-bar" style="background:#F59E0B;width:40%"></div>
-        </div>
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">OOS + риск</div>
-          <div class="dash-kpi-val" style="color:#EF4444">N SKU</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">требуют заказа</div>
-          <div class="dash-kpi-bar" style="background:#EF4444;width:30%"></div>
-        </div>
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">Рекомендован заказ</div>
-          <div class="dash-kpi-val" style="color:#10B981">X млн ₸</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">P1+P2+P3</div>
-          <div class="dash-kpi-bar" style="background:#10B981;width:60%"></div>
-        </div>
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">Перемещения</div>
-          <div class="dash-kpi-val" style="color:#A78BFA">N SKU</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">без дозаказа</div>
-          <div class="dash-kpi-bar" style="background:#7C3AED;width:20%"></div>
-        </div>
-        <div class="dash-kpi">
-          <div class="dash-kpi-lbl">Потенциал промо</div>
-          <div class="dash-kpi-val" style="color:#FB923C">X млн ₸</div>
-          <div style="font-size:10px;color:#64748B;margin-top:3px">к высвобождению</div>
-          <div class="dash-kpi-bar" style="background:#F97316;width:35%"></div>
-        </div>
-      </div>
+<section class="section">
+  <div class="container" style="text-align:center">
+    <div class="label">Следующий шаг</div>
+    <h2 class="title">Запустить пилот ProfitGuard Platform<br>на ваших данных.</h2>
+    <p class="subtitle">Пилот начинается с одного модуля и масштабируется до полной платформы.</p>
+    <div class="hero-btns" style="justify-content:center">
+      <a href="contact.html" class="btn btn-primary">Запустить пилот →</a>
+      <a href="commercial.html" class="btn btn-ghost">Смотреть первый модуль</a>
     </div>
   </div>
 </section>
-
-<!-- CTA -->
-<div class="cta-banner">
-  <div class="container">
-    <h2>Хотите увидеть, где ваша компания теряет деньги?</h2>
-    <p>Запустим пилот за 10 рабочих дней на ваших данных из 1С.</p>
-    <div style="margin-bottom:28px">
-      <div class="contact-name">Екатерина Денисова</div>
-      <a href="tel:+77770090703" class="contact-phone">+7 777 009 07 03</a>
-    </div>
-    <div class="hero-btns">
-      <a href="https://wa.me/77770090703" target="_blank" class="btn btn-primary">Написать в WhatsApp →</a>
-      <a href="contact.html" class="btn btn-ghost">Запросить пилот</a>
-    </div>
-  </div>
-</div>
 
 <footer>
-  <div class="container">
-    <div class="foot-links">
-      <a href="index.html">Главная</a>
-      <a href="commercial.html">Commercial Tower</a>
-      <a href="inventory.html">Inventory Tower</a>
-      <a href="ceo.html">CEO Tower</a>
-      <a href="contact.html">Пилот</a>
+  <div class="container" style="text-align:center">
+    <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+      <a href="index.html">Платформа</a>
+      <a href="commercial.html">DistributionGuard</a>
+      <a href="inventory.html">RetailGuard</a>
+      <a href="ceo.html">SalesControl</a>
+      <a href="contact.html">Контакт</a>
     </div>
-    <p><strong style="color:#475569">ProfitGuard AI</strong> · 2026 ·
+    <p><strong style="color:#475569">ProfitGuard Platform</strong> · 2026 · Контакт: 
       <strong style="color:#475569">Екатерина Денисова</strong> ·
       <a href="tel:+77770090703" style="color:#93C5FD;text-decoration:none">+7 777 009 07 03</a> ·
       <a href="https://wa.me/77770090703" target="_blank" style="color:#4ADE80;text-decoration:none;font-weight:500">WhatsApp</a>

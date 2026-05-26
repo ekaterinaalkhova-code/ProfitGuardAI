@@ -64,3 +64,158 @@ document.addEventListener('DOMContentLoaded',()=>{
   initNav();
   initAnimations();
 });
+
+
+
+// ProfitGuard instant site agent
+function initProfitGuardAgent(){
+  if(document.getElementById('pg-agent-root')) return;
+
+  const knowledge = [
+    {
+      keys:['что такое','profitguard','платформа','product','продукт'],
+      answer:'ProfitGuard Platform — B2B-платформа коммерческого контроля для ритейла, дистрибуции и sales-команд. Она превращает выгрузки 1С и Excel ПланФакт в dashboard: план/факт, прогноз месяца, GAP, клиенты риска, дистр-пакеты, АКБ, запасы и action-list.'
+    },
+    {
+      keys:['модули','модуль','distribution','retail','sales','ceo','inventory','commercial'],
+      answer:'В платформе 3 ключевых модуля: DistributionGuard — контроль дистрибуции, клиентов, регионов, дистр-пакетов и АКБ; RetailGuard — контроль SKU, OOS, overstock, frozen capital и автозаказа; SalesControl Tower — задачи команде продаж, план дожима и реактивация клиентов.'
+    },
+    {
+      keys:['distributionguard','commercial','план факт','план/факт','дистр','акб'],
+      answer:'DistributionGuard показывает план/факт по регионам, клиентам и дистр-пакетам, прогноз закрытия месяца, GAP, нужный темп в день, АКБ-точки, потерянные/просевшие точки и план дожима.'
+    },
+    {
+      keys:['retailguard','inventory','запас','остат','oos','overstock','frozen','автозаказ'],
+      answer:'RetailGuard / Inventory Tower управляет запасами: OOS, overstock, dead stock, frozen capital, ABC/XYZ, автозаказ P1/P2/P3, перемещения между регионами, промо, возвраты и ликвидация.'
+    },
+    {
+      keys:['salescontrol','sales control','команда','задачи','дожим','менеджер'],
+      answer:'SalesControl Tower превращает аналитику в задачи: кого дожать сегодня, какие клиенты не заказали, какие АКБ-точки потеряны, какой регион проседает и какой action-list нужен команде на день/неделю.'
+    },
+    {
+      keys:['файлы','загрузка','1с','excel','планфакт','выгрузка'],
+      answer:'Для пилота нужны: ПланФакт Excel, выгрузка продаж текущего месяца из 1С, выгрузка прошлого месяца для АКБ и при необходимости дневная выгрузка. Платформа проверяет структуру, считает KPI и формирует Excel-экспорт.'
+    },
+    {
+      keys:['срок','пилот','сколько дней','запуск','внедрение'],
+      answer:'Пилот можно запустить за 10 рабочих дней: 1–2 день диагностика данных, 3–5 день настройка под формат компании, 6–8 день первый расчёт и проверка, 9–10 день презентация CEO и обучение команды.'
+    },
+    {
+      keys:['стоимость','цена','тариф','подписка','сколько стоит'],
+      answer:'Пилотный формат обычно оценивается отдельно после диагностики данных. Для коммерческой модели возможны тарифы: Starter, Business и Enterprise — в зависимости от модулей, пользователей, интеграций и SLA.'
+    },
+    {
+      keys:['безопасность','data leak','dlp','данные','конфиденциальность'],
+      answer:'ProfitGuard проектируется с учётом Data Leak Prevention: контроль источников данных, обработка файлов внутри сессии/закрытого контура, роли доступа, история загрузок и отказ от передачи коммерческих данных в открытые каналы.'
+    },
+    {
+      keys:['контакт','связаться','whatsapp','телефон','демо','презентация'],
+      answer:'Для запуска пилота свяжитесь с Екатериной Денисовой: WhatsApp / телефон +7 777 009 07 03. Можно запросить демо, диагностику ваших выгрузок и оценку пилота.'
+    }
+  ];
+
+  function findAnswer(q){
+    const text = (q || '').toLowerCase();
+    let best = null;
+    let score = 0;
+    for(const item of knowledge){
+      const s = item.keys.reduce((acc,k)=>acc + (text.includes(k.toLowerCase()) ? 1 : 0), 0);
+      if(s > score){ score = s; best = item; }
+    }
+    if(best) return best.answer;
+    return 'Могу ответить по ProfitGuard Platform, модулям DistributionGuard / RetailGuard / SalesControl Tower, пилоту, файлам 1С/Excel, АКБ, план-факту, запасам и стоимости. Напишите вопрос короче или свяжитесь напрямую: +7 777 009 07 03.';
+  }
+
+  const styles = document.createElement('style');
+  styles.textContent = `
+    .pg-agent-fab{position:fixed;right:22px;bottom:22px;z-index:9999;border:0;border-radius:999px;background:#185FA5;color:#fff;padding:14px 18px;font-weight:800;box-shadow:0 18px 40px rgba(15,23,42,.22);cursor:pointer;font-size:14px}
+    .pg-agent{position:fixed;right:22px;bottom:82px;width:min(380px,calc(100vw - 32px));height:520px;max-height:calc(100vh - 110px);background:#fff;border:1px solid #E2E8F0;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.25);z-index:9999;display:none;overflow:hidden}
+    .pg-agent.open{display:flex;flex-direction:column}
+    .pg-agent-head{background:#0F172A;color:#fff;padding:16px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .pg-agent-title{font-size:15px;font-weight:800;line-height:1.2}
+    .pg-agent-sub{font-size:11px;color:#CBD5E1;margin-top:3px;line-height:1.35}
+    .pg-agent-close{background:rgba(255,255,255,.12);border:0;color:#fff;border-radius:8px;width:28px;height:28px;cursor:pointer;font-size:18px}
+    .pg-agent-body{padding:14px;overflow-y:auto;flex:1;background:#F8FAFC}
+    .pg-msg{padding:10px 12px;border-radius:13px;margin-bottom:9px;font-size:13px;line-height:1.45;white-space:pre-wrap}
+    .pg-msg.bot{background:#fff;color:#0F172A;border:1px solid #E2E8F0}
+    .pg-msg.user{background:#185FA5;color:#fff;margin-left:42px}
+    .pg-quick{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+    .pg-quick button{border:1px solid #CBD5E1;background:#fff;color:#0F172A;border-radius:999px;padding:7px 9px;font-size:11px;cursor:pointer}
+    .pg-agent-input{display:flex;gap:8px;padding:12px;background:#fff;border-top:1px solid #E2E8F0}
+    .pg-agent-input input{flex:1;border:1px solid #CBD5E1;border-radius:999px;padding:11px 13px;font-size:13px;color:#0F172A;outline:none}
+    .pg-agent-input button{border:0;background:#185FA5;color:#fff;border-radius:999px;padding:0 14px;font-weight:800;cursor:pointer}
+    .pg-agent-wa{display:block;margin-top:8px;color:#185FA5;font-weight:800;text-decoration:none}
+    @media(max-width:640px){.pg-agent{right:12px;bottom:72px;width:calc(100vw - 24px);height:70vh}.pg-agent-fab{right:12px;bottom:14px}}
+  `;
+  document.head.appendChild(styles);
+
+  const root = document.createElement('div');
+  root.id = 'pg-agent-root';
+  root.innerHTML = `
+    <button class="pg-agent-fab" type="button">💬 Задать вопрос</button>
+    <div class="pg-agent" role="dialog" aria-label="ProfitGuard agent">
+      <div class="pg-agent-head">
+        <div>
+          <div class="pg-agent-title">ProfitGuard Agent</div>
+          <div class="pg-agent-sub">Отвечает по платформе, модулям, пилоту и загрузке данных</div>
+        </div>
+        <button class="pg-agent-close" type="button">×</button>
+      </div>
+      <div class="pg-agent-body">
+        <div class="pg-msg bot">Здравствуйте. Я отвечу на вопросы по ProfitGuard Platform. Спросите про модули, пилот, загрузку 1С/Excel, АКБ, запасы или стоимость.</div>
+        <div class="pg-quick">
+          <button type="button">Что такое ProfitGuard?</button>
+          <button type="button">Какие модули есть?</button>
+          <button type="button">Как запустить пилот?</button>
+          <button type="button">Какие файлы нужны?</button>
+        </div>
+      </div>
+      <form class="pg-agent-input">
+        <input type="text" placeholder="Напишите вопрос..." autocomplete="off">
+        <button type="submit">→</button>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(root);
+
+  const fab = root.querySelector('.pg-agent-fab');
+  const box = root.querySelector('.pg-agent');
+  const close = root.querySelector('.pg-agent-close');
+  const body = root.querySelector('.pg-agent-body');
+  const form = root.querySelector('.pg-agent-input');
+  const input = root.querySelector('input');
+
+  function addMsg(text, who){
+    const msg = document.createElement('div');
+    msg.className = 'pg-msg ' + who;
+    msg.textContent = text;
+    body.appendChild(msg);
+    body.scrollTop = body.scrollHeight;
+  }
+  function ask(q){
+    if(!q || !q.trim()) return;
+    addMsg(q, 'user');
+    const ans = findAnswer(q);
+    setTimeout(()=>{
+      addMsg(ans, 'bot');
+      if(q.toLowerCase().includes('контакт') || q.toLowerCase().includes('пилот') || q.toLowerCase().includes('демо')){
+        const a = document.createElement('a');
+        a.className = 'pg-agent-wa';
+        a.href = 'https://wa.me/77770090703';
+        a.target = '_blank';
+        a.textContent = 'Написать Екатерине в WhatsApp →';
+        body.appendChild(a);
+        body.scrollTop = body.scrollHeight;
+      }
+    }, 180);
+  }
+
+  fab.addEventListener('click',()=>{box.classList.toggle('open'); setTimeout(()=>input.focus(), 100);});
+  close.addEventListener('click',()=>box.classList.remove('open'));
+  form.addEventListener('submit',e=>{e.preventDefault(); const q=input.value; input.value=''; ask(q);});
+  root.querySelectorAll('.pg-quick button').forEach(btn=>btn.addEventListener('click',()=>ask(btn.textContent)));
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  initProfitGuardAgent();
+});
